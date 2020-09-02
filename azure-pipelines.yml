@@ -17,6 +17,7 @@ steps:
   inputs:
     command: 'restore'
     feedsToUse: 'select'
+  displayName: packages restore
 
 - task: DotNetCoreCLI@2
   inputs:
@@ -28,3 +29,4 @@ steps:
   inputs:
     command: 'test'
     projects: '**/*.csproj'
+  displayName: run tests
