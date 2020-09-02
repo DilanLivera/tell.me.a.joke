@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5E87EF27
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tell.me.a.joke", "src\tell.me.a.joke\tell.me.a.joke.csproj", "{FB205E85-B97E-4FD5-A9FB-EEAB04A3AB01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "tests\UnitTests\UnitTests.csproj", "{65981190-8B4C-4C3C-A657-F2A4B144134E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{FB205E85-B97E-4FD5-A9FB-EEAB04A3AB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB205E85-B97E-4FD5-A9FB-EEAB04A3AB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB205E85-B97E-4FD5-A9FB-EEAB04A3AB01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65981190-8B4C-4C3C-A657-F2A4B144134E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65981190-8B4C-4C3C-A657-F2A4B144134E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65981190-8B4C-4C3C-A657-F2A4B144134E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65981190-8B4C-4C3C-A657-F2A4B144134E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FB205E85-B97E-4FD5-A9FB-EEAB04A3AB01} = {980CFBCD-5DCB-4008-B36E-ACC8D222E62F}
+		{65981190-8B4C-4C3C-A657-F2A4B144134E} = {5E87EF27-2DE2-4F8F-AFCC-59E25FE55F82}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2F776EC-1527-46DB-9F77-17261C30C0F6}
