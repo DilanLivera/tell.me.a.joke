@@ -13,11 +13,10 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
-    restoreSolution: '**/*.sln'
-    feedsToUse: 'config'
+    feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   inputs:
