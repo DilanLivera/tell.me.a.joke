@@ -42,16 +42,17 @@ steps:
     zipAfterPublish: True
     
 - task: PublishBuildArtifacts@1
+  displayName: Publish Build Artifacts
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
 - task: AzureRmWebAppDeployment@4
-  displayName: Deploy
+  displayName: Depoly
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure Personal Subscription(a83b4344-3ca8-44ec-be03-7e58dfe3c318)'
     appType: 'webApp'
     WebAppName: 'Tell-Me-A-Joke'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
