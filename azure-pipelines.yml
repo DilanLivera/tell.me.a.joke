@@ -30,5 +30,29 @@ steps:
   displayName: Test
   inputs:
     command: test
-    projects: '**/*tests/*.csproj'
+    projects: '**/tests/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: Publish
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
+    
+- task: PublishBuildArtifacts@1
+  displayName: Publish Build Artifacts
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+- task: AzureRmWebAppDeployment@4
+  displayName: Depoly
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure Personal Subscription(a83b4344-3ca8-44ec-be03-7e58dfe3c318)'
+    appType: 'webApp'
+    WebAppName: 'Tell-Me-A-Joke'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
