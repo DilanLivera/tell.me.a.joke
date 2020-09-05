@@ -20,7 +20,7 @@ namespace tell.me.a.joke.Controllers
         {
             var joke = await _jokeService.GetAJoke();
 
-            return Ok(joke);
+            return new OkObjectResult(joke);
         }
     }
 }

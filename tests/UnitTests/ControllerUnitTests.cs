@@ -29,7 +29,7 @@ namespace UnitTests
             _jokeService.Verify(js => js.GetAJoke(), Times.Once);
         }
 
-        [Fact(DisplayName ="When called returns a joke")]
+        [Fact(DisplayName = "When called returns a joke")]
         public async Task WhenCalled_ReturnsAJokeAsync()
         {
             ActionResult response = await _controller.GetAsync();
