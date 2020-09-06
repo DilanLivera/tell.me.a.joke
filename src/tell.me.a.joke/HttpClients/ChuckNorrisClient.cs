@@ -37,7 +37,7 @@ namespace tell.me.a.joke.HttpClients
                 {
                     Console.WriteLine("Invalid JSON.");
                 }
-                catch(Exception exception)
+                catch (Exception exception)
                 {
                     Console.WriteLine(exception.Message);
                 }

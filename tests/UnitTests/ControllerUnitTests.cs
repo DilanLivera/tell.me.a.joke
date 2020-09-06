@@ -24,7 +24,7 @@ namespace UnitTests
         [Fact(DisplayName = "When called calls GetAJoke method of JokeService")]
         public async Task WhenCalled_CallsGetAJokeMethodOfJokeServiceAsync()
         {
-            ActionResult response = await _controller.GetAsync();
+            ActionResult response = await _controller.PostAsync();
 
             _jokeService.Verify(js => js.GetAJoke(), Times.Once);
         }
@@ -32,7 +32,7 @@ namespace UnitTests
         [Fact(DisplayName = "When called returns a joke")]
         public async Task WhenCalled_ReturnsAJokeAsync()
         {
-            ActionResult response = await _controller.GetAsync();
+            ActionResult response = await _controller.PostAsync();
             var result = response as OkObjectResult;
 
             Assert.Equal("joke", result.Value);

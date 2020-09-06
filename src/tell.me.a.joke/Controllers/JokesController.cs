@@ -15,8 +15,8 @@ namespace tell.me.a.joke.Controllers
             _jokeService = jokeService;
         }
 
-        [HttpGet]
-        public async Task<ActionResult> GetAsync()
+        [HttpPost]
+        public async Task<ActionResult> PostAsync()
         {
             var joke = await _jokeService.GetAJoke();
 
